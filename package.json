@@ -1,0 +1,19 @@
+{
+  "name": "koa-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "example": "nodemon -w src -w example ./example/index.js ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "koa": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
