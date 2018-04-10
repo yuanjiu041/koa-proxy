@@ -4,10 +4,12 @@ const proxy = require('../src/index.js')
 const app = new koa()
 
 app.use(proxy({
-  origin: 'http://www.baidu.com',
-  rules: [
-    (ctx) => {}
-  ]
+  mapper: {
+    '/baidu/*': 'http://www.baidu.com',
+    '/taobao/*': 'http://www.taobao.com',
+    '/dawnapp/*': 'http://localhost:3000/dawnapp',
+    '/assets/*': 'http://localhost:3000/assets'
+  }
 }))
 
 app.use((ctx, next) => {
